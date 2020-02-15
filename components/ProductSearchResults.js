@@ -31,7 +31,7 @@ export default class ProductSearchResults extends Component {
         style={styles.userButton}
         onPress={() => this.pressfilter()}
       >
-        <Icon name="grid" />
+        <Icon name='grid' />
       </TouchableOpacity>
     );
   }
@@ -51,9 +51,12 @@ export default class ProductSearchResults extends Component {
 
   setFoundProductsText() {
     const number = this.state.products.length;
-    const text = this.state.products.length === 1 ? 'producto encontrado' : 'productos encontrados';
+    const text =
+      this.state.products.length === 1
+        ? 'producto encontrado'
+        : 'productos encontrados';
 
-    return `${number} ${text}`
+    return `${number} ${text}`;
   }
 
   render() {
@@ -72,10 +75,7 @@ export default class ProductSearchResults extends Component {
     ) : (
       <React.Fragment>
         <View style={styles.top}>
-          <Text style={styles.title}>
-            {' '}
-            {foundProductsText}
-          </Text>
+          <Text style={styles.title}> {foundProductsText}</Text>
           {this.renderButton()}
         </View>
         {this.state.filtersActive ? (

@@ -21,7 +21,7 @@ import FilterProduct from '../components/FilterProduct';
 import CategoryButton from '../components/CategoryButton';
 import { DISHES, PRODUCTS } from '../constants/Category';
 
-const platos = ['Desayuno', 'Almuerzo', 'Merienda', 'Cena'];
+const platos = ['Desayuno o Merienda', 'Almuerzo o Cena'];
 const productos = [
   'Panificados',
   'Bebidas',
