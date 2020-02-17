@@ -197,14 +197,14 @@ export default class ProfileScreen extends Component {
                   padding: 20
                 }}
               >
-                <View style={styles.button}>
-                  <TouchableOpacity onPress={() => this.next()}>
-                    <Text>Guardar</Text>
+                <View>
+                  <TouchableOpacity onPress={() => this.logout()}>
+                    <Text style={styles.button}>Cerrar Sesión</Text>
                   </TouchableOpacity>
                 </View>
-                <View style={styles.logout}>
-                  <TouchableOpacity onPress={() => this.logout()}>
-                    <Text style={{ textAlign: 'center' }}>Cerrar Sesión</Text>
+                <View>
+                  <TouchableOpacity onPress={() => this.next()}>
+                    <Text style={styles.button}>Guardar</Text>
                   </TouchableOpacity>
                 </View>
               </View>
@@ -270,26 +270,6 @@ const styles = StyleSheet.create({
     fontSize: 16
     // backgroundColor: colors.secondaryColor,
   },
-  button: {
-    // position: 'absolute',
-    // bottom: 30,
-    // right: 15,
-    // fontSize: 14,
-    // width: '25%',
-    // height: '5%',
-    // borderRadius: 5,
-    // justifyContent: 'center'
-  },
-  logout: {
-    // position: 'absolute',
-    // bottom: 30,
-    // left: 15,
-    // fontSize: 14,
-    // width: '25%',
-    // height: '5%',
-    // borderRadius: 5,
-    // justifyContent: 'center'
-  },
   pickerContainer: {
     borderRadius: 5,
     height: 50,
@@ -310,4 +290,9 @@ const styles = StyleSheet.create({
   switch:{
     padding: 5,
   },
+  button: { 
+    color: Colors.secondaryDarkColor,
+    textAlign: 'center',
+    fontWeight: 'bold' 
+  }
 });

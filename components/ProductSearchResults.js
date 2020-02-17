@@ -68,10 +68,6 @@ export default class ProductSearchResults extends Component {
         <Text style={styles.title}> Cargando </Text>
         <Spinner></Spinner>
       </View>
-    ) : this.state.products.length === 0 ? (
-      <View style={styles.loading}>
-        <Text style={styles.title}> No se encontraron productos </Text>
-      </View>
     ) : (
       <React.Fragment>
         <View style={styles.top}>
@@ -88,19 +84,29 @@ export default class ProductSearchResults extends Component {
         ) : (
           <View></View>
         )}
-        <FlatList
-          style={styles.flatList}
-          data={this.state.products}
-          renderItem={product => (
-            <ProductCard
-              product={product}
-              showOrHideProductByStores={showOrHideProductByStores}
-            />
-          )}
-          keyExtractor={(product, index) => {
-            return product.id.toString();
-          }}
-        />
+        
+        {
+          this.state.products.length === 0 ? (
+            <View style={styles.loading}>
+              <Text style={styles.title}> No se encontraron productos </Text>
+            </View>
+          ) : (
+            <FlatList
+            style={styles.flatList}
+            data={this.state.products}
+            renderItem={product => (
+              <ProductCard
+                product={product}
+                showOrHideProductByStores={showOrHideProductByStores}
+              />
+            )}
+            keyExtractor={(product, index) => {
+              return product.id.toString();
+            }}
+          /> 
+          )
+        }
+
       </React.Fragment>
     );
   }

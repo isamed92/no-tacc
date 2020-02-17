@@ -35,8 +35,6 @@ const AppSwitchNavigator = createSwitchNavigator({
   SearchScreen: SearchScreen
 });
 
-
-
 const AppStackNavigator = createStackNavigator({
   // LoadingScreen: LoadingScreen,
   // LoginScreen: LoginScreen,
@@ -78,14 +76,11 @@ const AppStackNavigator = createStackNavigator({
       backgroundColor: colors.primaryColor,
 
     }
-
-
   },
 }
 );
 
 const AppNavigator = createAppContainer(AppStackNavigator);
-
 
 export default class App extends Component {
   constructor(props) {

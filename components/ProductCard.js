@@ -26,10 +26,10 @@ export default class ProductCard extends Component {
           <View style={styles.product}>
             <Text style={styles.name}> {product.name}</Text>
             <Text style={styles.brand}>
-              Marca: {product.brand}
+              <Text style={styles.boldText}>Marca: </Text>{product.brand}
             </Text>
             <Text style={styles.description}>
-              Cantidad: {product.quantity}
+              <Text style={styles.boldText}>Cantidad: </Text>{product.quantity}
             </Text>
           </View>
         </View>
@@ -63,5 +63,8 @@ const styles = StyleSheet.create({
     fontSize: 16,
     textTransform: 'capitalize',
     textAlign: 'center'
+  },
+  boldText: {
+    fontWeight: 'bold'
   }
 });

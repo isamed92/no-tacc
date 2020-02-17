@@ -513,6 +513,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     paddingLeft: 20,
     paddingTop: 10,
+    color: Colors.secondaryDarkColor,
+    fontWeight: 'bold'
   },
   bar: {
     flexDirection: 'row',
